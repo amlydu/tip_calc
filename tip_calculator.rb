@@ -3,10 +3,6 @@
 
 class TipCalculator
 
-	# def initialize
-	# 	@bill = 
-	# end
-
 	def ask_get(string)
 		puts string
 		amount = gets.chomp
@@ -24,25 +20,6 @@ class TipCalculator
 	def get_tip_amount
 		@tip_percentage = ask_get("What percentage would you like to tip?")
 	end
-	# def get_bill
-	# 	puts "What is the total amount of the bill?"
-	# 	@bill = gets.chomp
-	# 	until @bill =~ /\d+/
-	# 		puts "What is the total amount of the bill?"
-	# 		@bill = gets.chomp
-	# 	end
-	# 	@bill = @bill.to_f
-	# end
-
-	# def get_tip_amount
-	# 	puts "What percentage would you like to tip?"
-	# 	@tip_percentage = gets.chomp
-	# 	until @tip_percentage =~ /\d+/
-	# 		puts "What percentage would you like to tip?"
-	# 		@tip_percentage = gets.chomp
-	# 	end
-	# 	@tip_percentage = @tip_percentage.to_f
-	# end
 
 	def calc_tip
 		@tip_amount = @bill * (@tip_percentage/100)
@@ -60,17 +37,13 @@ class TipCalculator
 end
 
 
-def test
-	#need to have a calculator object
-	tip = TipCalculator.new
-	tip.get_bill
-	tip.get_tip_amount
-	tip.calc_tip
-	tip.total_bill
-	tip.output
-end
-
-test
+#need to have a calculator object
+tip = TipCalculator.new
+tip.get_bill
+tip.get_tip_amount
+tip.calc_tip
+tip.total_bill
+tip.output
 
 
 =begin
